@@ -1,0 +1,447 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Manrope:wght@200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root{
+    --cor0: #AD3824;
+    --cor1: #902C1E;
+    --cor2: #6E3B32;
+    --cor3: #332624;
+    --cor4: #24AD73;
+    --cor5: #2BCD7F;
+
+    --fonte1: "Bona Nova SC", serif;
+    --fonte2: "Open Sans", sans-serif;
+    --fonte3: "Manrope", sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    font-family: var(--fonte3);
+    color: white;
+}
+
+span{
+    color: var(--cor4);
+
+    font-weight: bold;
+}
+
+/* Cabeçalho */
+
+header nav{
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row nowrap;
+
+    /* padding: 10px; */
+
+    text-align: right;
+
+    height: auto;
+    
+    background-color: var(--cor2);
+}
+
+header nav *{
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+
+header nav img{
+    justify-self: flex-end;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    
+    margin: 5px;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.hamburguer-icon {
+    display: none;
+    cursor: pointer;
+    font-size: 2rem;
+    padding-right: 10px;
+}
+
+header nav div{
+    display: flex;   
+    flex-flow: column wrap;
+    justify-content: center;
+
+    height: auto;
+}
+
+header nav div ul li{
+    box-shadow: inset 1px 0px 0px black;
+    padding: 12px;
+
+    transition: 0.5s;
+}
+
+#menu{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    list-style: none;
+}
+
+header nav ul li a{
+    align-self: center;
+
+    text-decoration: none;
+    color: white;
+    width: 100px;
+
+    transition: 0.5s;
+}
+header nav ul li:hover{
+    background-color: var(--cor3);
+}
+header nav ul li:hover a{
+    color: var(--cor4);
+}
+
+header section{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    text-shadow: 2px 2px 5px black;
+
+    height: 700px;
+    color: white;
+}
+
+header section h1{
+    font-family: var(--fonte1);
+    font-weight: 700;
+    font-size: max(7vw, 48px);
+
+
+    /* padding-top: 250px; */
+}
+
+header section p{
+    font-family: var(--fonte2);
+    font-weight: 300;
+    font-size: max(3vw, 20.496px);
+}
+
+section#imagem-fundo{
+    background-image: url("../img/zucca3.jpg");
+    background-position: right center;
+    background-size: cover;
+    background-attachment: fixed;
+
+    height: 100vh;
+}
+
+/* MAIN */
+
+
+main section {
+    height: 353px;
+    margin: 0px;
+}
+
+section#cardapios{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+
+    background-color: var(--cor2);
+
+    padding: 0px 0px;
+    
+    min-width: 90vw;
+    height: auto;
+    
+    text-shadow: 1px 1px 5px black;
+}
+
+section div.menus{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+
+    width: 350px;
+
+    text-align: center;
+
+    margin: 50px 50px;
+
+    padding: 50px 10px;
+
+    border: 1px solid black;
+    background-color: var(--cor0);
+
+    transition: 0.5s;
+}
+section div.menus:hover{
+    border-radius: 20px;
+    
+}
+
+section div.menus h2{
+    font-family: var(--fonte1);
+    font-size: 2.5em;
+    
+}
+
+section div.menus p{
+    line-height: 2em;
+
+    padding: 40px 10px;
+
+    text-align: justify;
+}
+
+section > div.menus > a{
+    flex-grow: 0;
+    flex-shrink: 0;
+    align-self: center;
+
+    text-decoration: none;
+
+    padding: 12px 20px;
+
+    border: 1px solid black;
+
+    background-color: var(--cor2);
+    color: white;
+
+    transition: 0.5s;
+}
+
+section > div.menus > #delivery{
+    margin-top: 32px;
+}
+
+
+section > div.menus > a:hover{
+    text-decoration: none;
+
+    border-radius: 15px;
+
+    background-color: var(--cor3);
+    color: var(--cor4);
+}
+
+section#quem-somos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+
+    justify-content: center;
+    align-content: center;
+
+
+    background-color: var(--cor0);
+    min-height: 500px;
+    height: auto;
+
+    text-shadow: 1px 1px 5px black;
+
+    line-height: 2em;
+}
+
+section#quem-somos h2{
+    font-family: var(--fonte1);
+    font-size: 40px;
+    padding-bottom: 20px;
+
+}
+
+section#quem-somos #img-quem-somos{
+    background-image: url("../img/formaggi.webp");
+    background-size: cover;
+    background-position: bottom center;
+    
+    max-width: auto;
+    min-height: 550px;
+}
+
+section#quem-somos div{
+    flex-basis: 200px;
+    flex-shrink: 1;
+    flex-grow: 1;
+
+    padding: 20px 30px;
+}
+
+
+
+
+section#contato{
+    text-align: center;
+    
+    background-color: var(--cor2);
+
+    height: auto;
+    color: white;
+
+    text-shadow: 1px 1px 5px black;
+}
+section#contato h2{
+    font-family: var(--fonte1);
+    font-size: 2.5em;
+
+    padding: 20px;
+}
+section#contato #container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+
+    min-height: 300px;
+    height: auto;
+}
+section#contato #container > div{
+    flex-basis: 300px;
+
+    width: 50%;
+    text-align: justify;
+
+    padding: 30px;
+
+    line-height: 2em;
+}
+
+section#contato h3{
+    font-size: 1.5em;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+section#contato a{
+    color: var(--cor4);
+}
+section#contato a:hover{
+    color: var(--cor5);
+}
+
+section#contato span#fechado{
+    color: white;
+    text-decoration: line-through;
+}
+section#contato span{
+    color: var(--cor4);
+}
+
+
+
+
+section#localizacao{
+    text-align: center;
+    background-color: var(--cor0);
+
+
+    height: auto;
+    color: white;
+
+    padding-bottom: 20px;
+}
+
+section#localizacao h2{
+    font-family: var(--fonte1);
+    font-size: 2.5em;
+
+    padding: 20px;
+
+    text-shadow: 1px 1px 5px black;
+}
+
+section#localizacao #container{
+    display: flex;
+    flex-flow: column wrap;
+
+}
+
+section#localizacao p{
+    padding: 20px;
+}
+
+section#localizacao p a{
+    color: white;
+}
+section#localizacao p a:hover{
+    color: var(--cor4);
+}
+
+section#localizacao iframe{
+    width: 90%;
+}
+
+
+
+/* FOOTER */
+
+footer{
+    text-align: center;
+
+    background-color: var(--cor2);
+    color: white;
+}
+
+footer img{
+    color: white;
+    padding: 10px;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+    header{
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+    }
+
+    nav {
+        flex-direction: row;
+    }
+
+    header nav div ul li{
+        width: 130px;
+
+    }
+
+    .hamburguer-icon {
+        display: block;
+        align-self: flex-end;
+    }
+
+    #menu{
+        display: none;
+        flex-flow: column wrap;
+        align-items: flex-end;
+    }
+
+    /* Mostrar menu quando checkbox estiver marcado */
+    .menu-toggle:checked ~ #menu{
+    display: flex;
+    }
+
+
+    .hamburguer-icon {
+    display: block;
+    }
+}
