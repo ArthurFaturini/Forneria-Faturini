@@ -1,0 +1,115 @@
+@charset "UTF-8";
+
+html{
+    scroll-behavior: smooth;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    background-color: var(--cor2);
+    padding: 20px;
+}
+
+span{
+    text-shadow: 0px 0px 5px black;
+}
+
+.cardapio-item {
+    position: relative;
+    flex: 0 1 calc(50% - 20px);
+    display: flex;
+    justify-content: center;
+}
+
+
+.cardapio-toggle {
+    display: none;
+}
+
+.cardapio-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--cor0);
+    border-radius: 20px;
+    border: 1px solid black;
+    width: 200px;
+    height: 250px;
+    cursor: pointer;
+    padding: 15px;
+    transition: 0.5s;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse{
+    0%{
+        transform: scale(1);
+    }
+    70%{
+        transform: scale(1.03);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.cardapio-label:hover{
+    box-shadow: 0px 0px 15px black;
+}
+.cardapio-label img {
+    border-radius: 20px;
+    border: 1px solid black;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+
+}
+
+.cardapio-label div,
+.cardapio-label h2{
+    text-align: center;
+    text-shadow: 0px 0px 5px black;
+}
+
+.cardapio-label .nome-escondido{
+    display: none;
+}
+
+.cardapio-label .texto-escondido {
+    display: none;
+    font-size: 1em;
+}
+
+.cardapio-toggle:checked + .cardapio-label {
+    width: 400px;
+    flex-direction: row;
+    gap: 10px;
+    animation: none;
+}
+
+.cardapio-toggle:checked + .cardapio-label .texto-escondido, 
+.cardapio-toggle:checked + .cardapio-label .nome-escondido{
+    display: inline;
+}
+
+.cardapio-toggle:checked + .cardapio-label h2 {
+    display: none;
+}
+
+
+@media (max-width: 450px) {
+    .cardapio-toggle:checked + .cardapio-label {
+        width: 200px;
+        height: 420px;
+        flex-direction: column;
+        gap: 10px;
+        animation: none;
+    }
+
+    .cardapio-toggle:checked + .cardapio-label .nome-escondido {
+        display: inline;
+    }
+}
