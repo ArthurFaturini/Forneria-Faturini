@@ -158,6 +158,8 @@ footer{
 
     background-color: var(--cor2);
     color: white;
+
+    padding-top: 10px;
 }
 
 footer img{
