@@ -144,7 +144,6 @@ section#imagem-fundo{
     background-image: url("../img/zucca3.jpg");
     background-position: right center;
     background-size: cover;
-    background-attachment: fixed;
 
     height: 100vh;
 }
